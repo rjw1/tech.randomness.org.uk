@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged kml</title>
+		<description>Entries tagged kml</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>GPS Shiny Thing</title>
+		<link>http://tech.randomness.org.uk/GPS_Shiny_Thing.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/GPS_Shiny_Thing.html</guid>
+                <pubDate>Sat, 14 Apr 2007 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;So recently &lt;a href=&quot;http://london.randomness.org.uk/wiki.cgi?Kake&quot;&gt;Kake&lt;/a&gt; and &lt;a href=&quot;http://london.randomness.org.uk/wiki.cgi?Bob&quot;&gt;I&lt;/a&gt; have been adding &lt;a href=&quot;http://london.randomness.org.uk/wiki.cgi?Category_Free_Geodata&quot;&gt;Public Domain Geodata&lt;/a&gt; to our &lt;a href=&quot;http://london.randomness.org.uk/&quot;&gt;Guide to London&lt;/a&gt;
+using a Garmin Etrex she has been borrowing from a friend. However, it
+possibly has one of the one most annoying interfaces i&#39;ve used for a
+while and we only have one.&lt;/p&gt;
+&lt;p&gt;So, I succumbed and bought the &lt;a href=&quot;http://europe.nokia.com/accessorieslink?s=LD-3W&quot;&gt;Nokia LD-3W&lt;/a&gt; which works with my &lt;a href=&quot;http://europe.nokia.com/A4142101&quot;&gt;phone&lt;/a&gt;.
+I can get location data with applications which came as standard and
+indeed save landmarks which I can then export as an xml file. I cant
+get any routes though. However, I did find an &lt;a href=&quot;http://research.nokia.com/research/projects/SportsTracker/&quot;&gt;application&lt;/a&gt; from nokia research which almost gives me what i want. It can export trip data as kml. So for your viewing pleasure &lt;a href=&quot;http://maps.google.co.uk/maps?f=q&amp;amp;hl=en&amp;amp;q=http://randomness.org.uk/Shopgoo.kml&quot;&gt;My trip to the butchers&lt;/a&gt; this morning. It jumps around quite a bit. &lt;/p&gt;
+&lt;p&gt;One problem is that I can only get Lat/Long out when we are using OSGB for the guide. Thankfully, the windows &lt;a href=&quot;http://www.ordnancesurvey.co.uk/oswebsite/gps/osnetfreeservices/furtherinfo/questsoftware.html&quot;&gt;program&lt;/a&gt; the &lt;a href=&quot;http://www.ordnancesurvey.co.uk/&quot;&gt;Ordnance Survey&lt;/a&gt; provide to &lt;a href=&quot;/http://gps.ordnancesurvey.co.uk/convert.asp&quot;&gt;convert&lt;/a&gt; between them can run
+ under &lt;a href=&quot;http://www.winehq.com/&quot;&gt;Wine&lt;/a&gt;. This will make mass conversions easier. &lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

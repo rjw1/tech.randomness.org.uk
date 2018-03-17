@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged apt</title>
+		<description>Entries tagged apt</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Creating an apt repo.</title>
+		<link>http://tech.randomness.org.uk/Creating_an_apt_repo_.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Creating_an_apt_repo_.html</guid>
+                <pubDate>Thu, 22 May 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;So recently I&#39;ve backported[1] a couple of debian packages and needed somewhere to serve them from. The current work apt repo scares me so I followed &lt;a href=&quot;http://blog.unixdaemon.net/&quot;&gt;Dean&#39;s&lt;/a&gt; useful &lt;a href=&quot;http://blog.unixdaemon.net/cgi-bin/blosxom.pl/operatingsystems/linux/debian/personal_apt_repo_initial.html&quot;&gt;guide&lt;/a&gt; to setting one up instead. It worked very nicely and wasn&#39;t pain.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;[1] post to come hopefully&lt;/small&gt;&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Setting up a Signed apt repo</title>
+		<link>http://tech.randomness.org.uk/Setting_up_a_Signed_apt_repo.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Setting_up_a_Signed_apt_repo.html</guid>
+                <pubDate>Fri, 7 Aug 2009 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;So you&#39;ve set up a apt repository following dean&#39;s excellant &lt;a href=&quot;http://blog.unixdaemon.net/cgi-bin/blosxom.pl/operatingsystems/linux/debian/personal_apt_repo_initial.html&quot;&gt;instructions&lt;/a&gt; and youve tried to install a package and got the following warning&lt;/p&gt;
+&lt;pre&gt;WARNING: The following packages cannot be authenticated!&lt;/pre&gt;
+&lt;p&gt;At this point you have several choices:-
+&lt;ul&gt;
+&lt;li&gt;press yes and carry on.(not that useful if youre using puppet to install stuff)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;echo &quot;APT::Get::AllowUnauthenticated 1;&quot; &gt;&gt; /etc/apt/apt.conf.d/99unauth&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt; Set up a &lt;a href=&quot;http://wiki.debian.org/SecureApt&quot;&gt;secure repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lets go with setting up a secure repository.
+&lt;ul&gt;
+&lt;li&gt;Make yourself a gpg key - &lt;code&gt;gpg --gen-key&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Export your public key to a file - &lt;code&gt;gpg --armor --export $keyid &gt;public.key&lt;/code&gt;. You will need this later&lt;/li&gt;
+&lt;li&gt;Create an apt-release.conf containing &lt;code&gt;APT::FTPArchive::Release::Suite &quot;etch&quot;;&lt;/code&gt;&lt;small&gt;(Im behind and should have written this post a year ago)&lt;/small&gt; in your repository base.&lt;/li&gt;
+&lt;li&gt;Generate a release file - &lt;code&gt;apt-ftparchive -c apt-release.conf release dists/etch/ &gt; dists/etch/Release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a signed version - &lt;code&gt;gpg --sign -ba -o dists/etch/Release.gpg dists/etch/Release&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+Your repository is now secure. Now you need to tell your machines about your key or apt-get will emit &lt;pre&gt;W: GPG error: http://debianrepo etch Release: The following signatures couldn&#39;t be verified because the public key is not available: NO_PUBKEY $KEYID&lt;/pre&gt;
+To do this manually you can take the public.key you generated earlier and copy it to your machines and then run &lt;code&gt;apt-key add public.key&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+Of course in this day and age doing things like that for all your machines would be tedious so I use &lt;a href=&quot;http://reductivelabs.com/products/puppet/&quot;&gt;puppet&lt;/a&gt; with a class something like the following.&lt;/p&gt;
+&lt;pre&gt;
+class aptkey {
+
+  file { &quot;/etc/apt/public.key&quot;:
+    mode   =&gt; 440,
+    owner  =&gt; root,
+    group  =&gt; root,
+    source =&gt; [
+        &quot;puppet://puppet/host/public.key&quot;,
+        &quot;puppet://puppet/files/public.key&quot;
+        ],
+  }
+  exec { &quot;install-key&quot;:
+     command =&gt; &quot;/usr/bin/apt-key add /etc/apt/public.key&quot;,
+     require =&gt; File[&quot;/etc/apt/public.key&quot;],
+     unless  =&gt; &quot;/usr/bin/apt-key list | /bin/grep -q &#39;firstname.lastname&#39;&quot;;
+  }
+  exec { &quot;key-update&quot;:
+     command =&gt; &quot;/usr/bin/apt-get update&quot;,
+     require =&gt; Exec[&quot;install-key&quot;],
+  }
+}
+&lt;/pre&gt;
+
+
+</description>
+	</item>
+	
+        </channel>
+</rss>

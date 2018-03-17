@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries from July 2006</title>
+		<description>Entries from July 2006</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Switching.</title>
+		<link>http://tech.randomness.org.uk/Switching_.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Switching_.html</guid>
+                <pubDate>Tue, 4 Jul 2006 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;No, Not that &lt;a href=&quot;http://www.apple.com/getamac/&quot;&gt;one&lt;/a&gt; or indeed that &lt;a href=&quot;http://www.mozilla.com/firefox/switch.html&quot;&gt;one&lt;/a&gt; (thinking about it I stopped using IE at least 7 years ago). I&#39;ve finally succumbed and installed &lt;a href=&quot;http://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; on my laptop.&lt;/p&gt;
+&lt;p&gt; After several years of having &lt;a href=&quot;http://openbsd.org&quot;&gt;OpenBSD&lt;/a&gt; as my desktop OS of choice I&#39;ve decided to try something new. My work laptop has been&lt;a href=&quot;http://www.sun.com/software/solaris/&quot; &gt;Solaris 10&lt;/a&gt; for several months now given my previous incarnation as a Solaris Admin. However $work are a &lt;a href=&quot;http://www.debian.org/&quot;&gt;debian&lt;/a&gt; shop. So ive become more accustomed to linux and its annoyances and even started to like some of the features (&lt;a href=&quot;http://linux-net.osdl.org/index.php/Iproute2&quot;&gt;iproute&lt;/a&gt;,&lt;a href=&quot;http://www.debian.org/doc/manuals/apt-howto/&quot;&gt;apt&lt;/a&gt;). Also it was time for a reinstall anyway.&lt;/p&gt;
+&lt;p&gt; So I downloaded an iso and did the install dance. It all went smoothly. INstalling windowmaker and making it my session default was also easy. the choice of programs is overwhelming compared to what was in the openbsd ports collections. Then a bad thing happened. It ate my X config. I dont know why but it just did.Thankfully a reinstall fixed. Which was good thing since I had installed lots of crap anyway.&lt;/p&gt;
+&lt;p&gt; Im seriously tempted to install it on my work laptop to.&lt;/p&gt;  
+
+</description>
+	</item>
+	
+	<item>
+		<title>Nagios Setups</title>
+		<link>http://tech.randomness.org.uk/Nagios_Setups.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Nagios_Setups.html</guid>
+                <pubDate>Wed, 19 Jul 2006 16:18:17 GMT</pubDate>
+		<description>
+
+</description>
+	</item>
+	
+	<item>
+		<title>Ooo Shiny Lights</title>
+		<link>http://tech.randomness.org.uk/Ooo_Shiny_Lights.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Ooo_Shiny_Lights.html</guid>
+                <pubDate>Mon, 31 Jul 2006 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt; I was sitting in a datacentre in the arse end of nowhere the other day waiting for a machine to boot when I noticed that 4 drives were flashing their activity lights at the same time. The fact that these 4 drives were spread across 2 machines was really shiny. It meant that soemthing I had set up was obvioulsy working properly.&lt;/p&gt;
+&lt;p&gt; Each machine had 2 mirrored disks using software raid which accounts for 2 drives in one machine flashing at the same time. What made all 4 drives flash at the same time was &lt;a href=&quot;http://www.drbd.org/&quot;&gt;drbd&lt;/a&gt; which is bascially network raid 1.&lt;/p&gt;
+&lt;p&gt; We are using &lt;a href=&quot;http://www.drbd.org/&quot;&gt;drbd&lt;/a&gt; along with &lt;a href=&quot;http://linux-ha.org/HeartbeatProgram&quot;&gt;heartbeat&lt;/a&gt; to provide a HA solution for our database needs.&lt;/p&gt;
+&lt;p&gt; Anyway it felt good to realise that soemthing I had setup had a physical means to show it is working. Although it has to be said it felt quite good when I could just yank the power out of a machine and have the database failover nicely.&lt;/p&gt; 
+</description>
+	</item>
+	
+        </channel>
+</rss>

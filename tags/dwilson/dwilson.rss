@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged dwilson</title>
+		<description>Entries tagged dwilson</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Creating an apt repo.</title>
+		<link>http://tech.randomness.org.uk/Creating_an_apt_repo_.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Creating_an_apt_repo_.html</guid>
+                <pubDate>Thu, 22 May 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;So recently I&#39;ve backported[1] a couple of debian packages and needed somewhere to serve them from. The current work apt repo scares me so I followed &lt;a href=&quot;http://blog.unixdaemon.net/&quot;&gt;Dean&#39;s&lt;/a&gt; useful &lt;a href=&quot;http://blog.unixdaemon.net/cgi-bin/blosxom.pl/operatingsystems/linux/debian/personal_apt_repo_initial.html&quot;&gt;guide&lt;/a&gt; to setting one up instead. It worked very nicely and wasn&#39;t pain.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;[1] post to come hopefully&lt;/small&gt;&lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

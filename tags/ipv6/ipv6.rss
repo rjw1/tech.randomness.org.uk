@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged ipv6</title>
+		<description>Entries tagged ipv6</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>World IPv6 Launch day woke me up</title>
+		<link>http://tech.randomness.org.uk/World_IPv6_Launch_day_woke_me_up.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/World_IPv6_Launch_day_woke_me_up.html</guid>
+                <pubDate>Wed, 6 Jun 2012 10:06:23 GMT</pubDate>
+		<description>&lt;p&gt;Early this morning I got alerts from several of our nagios installations saying they couldnt reach www.google.com. I logged into a production machine from my phone and cheked it was still talking to the internet properly. They went back to sleep with an inkling this maybe an issue with &lt;a href=&quot;http://www.worldipv6launch.org/&quot;&gt;World IPv6 Launch&lt;/a&gt; day.&lt;/p&gt; 
+
+&lt;p&gt;When I woke up refreshed and ready for action I went an investigated and it would seem that on our servers check_ping will default to resolving the AAAA record which isnt good when you dont have IPv6 connectivity. So the easy fix is to specify -4 to check ping. Although I&#39;m tempted to just remove the check since if the internet is that broken the alert cant be sent anyway.&lt;/p&gt;
+
+</description>
+	</item>
+	
+        </channel>
+</rss>

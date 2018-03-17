@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged certificate</title>
+		<description>Entries tagged certificate</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Generating a SSL certificate with Capistrano</title>
+		<link>http://tech.randomness.org.uk/Generating_a_SSL_certificate_with_Capistrano.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Generating_a_SSL_certificate_with_Capistrano.html</guid>
+                <pubDate>Sun, 30 Aug 2009 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;&lt;a href=&quot;http://www.capify.org/index.php/Capistrano&quot;&gt;Capistrano&lt;/a&gt; is useful for deploying ruby applications. It can also be used to help with configuration and setup of things related to the applications&lt;/p&gt;
+&lt;p&gt; Such as creating the ssl keys and certificates for the demo and staging sites. I&#39;ve always used an &lt;a href=&quot;http://www.exim.org/exim-html-4.00/doc/html/spec_36.html#SECT36.5&quot;&gt;openssl one liner&lt;/a&gt; to do this but I still needed to fill in the details for the certificate. Which is less that ideal if you want to automate the creation of the keys and certificates. So I dug around and found the right incantation to pass the certificate details to openssl. I then made this into a capistrano recipe.&lt;/p&gt;
+
+&lt;pre&gt;
+namespace :sslcert do
+
+  desc &quot;create a self signed ssl cert&quot;
+  task :create, :roles =&gt; :web do
+    sudo &quot;openssl req -x509 -newkey rsa:2048 -keyout /etc/ssl/private/#{application}.key -out /etc/ssl/certs/#{application}.crt  -days 9999 -nodes -subj \&quot;/C=GB/ST=England/L=London/O=#{application}/OU=IT/CN=#{servername}\&quot;&quot;
+  end
+end
+&lt;/pre&gt; 
+&lt;p&gt;As you can see the magic happens with the -subj option.&lt;/p&gt;
+&lt;p&gt;This recipe puts the ssl certificate and key in the default location for them on debian. You could of course change this and then not need to use sudo. In my actual work version I also make sure this recipe doesn&#39;t run on production deployments since they should be using real ssl certificates.&lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

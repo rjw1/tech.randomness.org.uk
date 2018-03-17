@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged openguides</title>
+		<description>Entries tagged openguides</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Things I have learnt this week</title>
+		<link>http://tech.randomness.org.uk/Things_I_have_learnt_this_week.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Things_I_have_learnt_this_week.html</guid>
+                <pubDate>Sat, 7 Apr 2007 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;Things I have learnt this week.
+&lt;/p&gt;&lt;ul&gt;
+&lt;li class=&quot;u&quot;&gt;Backups are good.&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;If for instance your colo box breaks.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li class=&quot;u&quot;&gt;Tested backups are better.&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;Best to test them before your box breaks.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li class=&quot;u&quot;&gt;Automated backups are better still.&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;Humans forget to do things. Machines rarely do. So your backup may not be as recent as yo
+u think.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li class=&quot;u&quot;&gt;How to backup svn&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;&lt;code&gt; svnadmin dump $repo | bzip2 &amp;gt; svndump.bz2 &lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li class=&quot;u&quot;&gt;Checking which disk you are replacing in a degraded mirrored pair is a good thing&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;Your filesystem dieing or going back in time is not fun. See previous points&lt;/li&gt;&lt;/ul&gt;&lt;/l
+i&gt;&lt;/ul&gt;
+&lt;p&gt;Having learnt these things I have made my backup regime &lt;a href=&quot;http://morerandomness.org.uk/svn/tru
+nk/bob/scripts/backup.sh&quot;&gt;better&lt;/a&gt; and have made sure its croned and does backup the stuff I need. I s
+hould also start putting more stuff in my svn &lt;a href=&quot;http://morerandomness.org.uk/svn/&quot;&gt;repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This clusterfuck did annoyingly lead to losing about a weeks worth of data on the  &lt;a href=&quot;http://lo
+ndon.randomness.org.uk/&quot;&gt;Randomness Guide to London&lt;/a&gt; which was particularly galling since one of the
+reason for doing it was I trusted myself more with the data. bah&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>GPS Shiny Thing</title>
+		<link>http://tech.randomness.org.uk/GPS_Shiny_Thing.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/GPS_Shiny_Thing.html</guid>
+                <pubDate>Sat, 14 Apr 2007 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;So recently &lt;a href=&quot;http://london.randomness.org.uk/wiki.cgi?Kake&quot;&gt;Kake&lt;/a&gt; and &lt;a href=&quot;http://london.randomness.org.uk/wiki.cgi?Bob&quot;&gt;I&lt;/a&gt; have been adding &lt;a href=&quot;http://london.randomness.org.uk/wiki.cgi?Category_Free_Geodata&quot;&gt;Public Domain Geodata&lt;/a&gt; to our &lt;a href=&quot;http://london.randomness.org.uk/&quot;&gt;Guide to London&lt;/a&gt;
+using a Garmin Etrex she has been borrowing from a friend. However, it
+possibly has one of the one most annoying interfaces i&#39;ve used for a
+while and we only have one.&lt;/p&gt;
+&lt;p&gt;So, I succumbed and bought the &lt;a href=&quot;http://europe.nokia.com/accessorieslink?s=LD-3W&quot;&gt;Nokia LD-3W&lt;/a&gt; which works with my &lt;a href=&quot;http://europe.nokia.com/A4142101&quot;&gt;phone&lt;/a&gt;.
+I can get location data with applications which came as standard and
+indeed save landmarks which I can then export as an xml file. I cant
+get any routes though. However, I did find an &lt;a href=&quot;http://research.nokia.com/research/projects/SportsTracker/&quot;&gt;application&lt;/a&gt; from nokia research which almost gives me what i want. It can export trip data as kml. So for your viewing pleasure &lt;a href=&quot;http://maps.google.co.uk/maps?f=q&amp;amp;hl=en&amp;amp;q=http://randomness.org.uk/Shopgoo.kml&quot;&gt;My trip to the butchers&lt;/a&gt; this morning. It jumps around quite a bit. &lt;/p&gt;
+&lt;p&gt;One problem is that I can only get Lat/Long out when we are using OSGB for the guide. Thankfully, the windows &lt;a href=&quot;http://www.ordnancesurvey.co.uk/oswebsite/gps/osnetfreeservices/furtherinfo/questsoftware.html&quot;&gt;program&lt;/a&gt; the &lt;a href=&quot;http://www.ordnancesurvey.co.uk/&quot;&gt;Ordnance Survey&lt;/a&gt; provide to &lt;a href=&quot;/http://gps.ordnancesurvey.co.uk/convert.asp&quot;&gt;convert&lt;/a&gt; between them can run
+ under &lt;a href=&quot;http://www.winehq.com/&quot;&gt;Wine&lt;/a&gt;. This will make mass conversions easier. &lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Testing perl 5.10.1-RC1</title>
+		<link>http://tech.randomness.org.uk/Testing_perl_5_10_1_RC1.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Testing_perl_5_10_1_RC1.html</guid>
+                <pubDate>Mon, 10 Aug 2009 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;The first &lt;a href=&quot;http://use.perl.org/articles/09/08/07/0910246.shtml&quot;&gt;perl 5.10.1&lt;/a&gt; release candidate was released the other day. As &lt;a href=&quot;http://www.shadowcat.co.uk/blog/matt-s-trout/test-the-rc-test-the-rc-test-the-rc/&quot;&gt;mst says&lt;/a&gt; if you don&#39;t test it now and it breaks for you when its released its your fault. As a good &lt;a href=&quot;http://www.cpantesters.org/&quot;&gt;cpan tester&lt;/a&gt; I&#39;ve added it to my testing &lt;a href=&quot;http://svn.randomness.org.uk/trunk/bob/scripts/cpantest.sh&quot;&gt;setup&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Since I care about &lt;a href=&quot;http://openguides.org/&quot;&gt;OpenGuides&lt;/a&gt; for the &lt;a href=&quot;http://london.randomness.org.uk&quot;&gt;Randomness Guide to London&lt;/a&gt; I made sure to submit a &lt;a href=&quot;http://www.nntp.perl.org/group/perl.cpan.testers/2009/08/msg4944870.html&quot;&gt;test report&lt;/a&gt; for &lt;a href=&quot;http://www.cpantesters.org/distro/O/OpenGuides.html&quot;&gt;it&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While I was doing this I also added perl 5.8.9 to my setup. I also changed my setup slightly by pre-installing &lt;a href=&quot;http://www.iinteractive.com/moose/&quot;&gt;Moose&lt;/a&gt; and &lt;a href=&quot;http://www.catalystframework.org/&quot;&gt;Catalyst&lt;/a&gt; since thats what all the cool perl programmers are using these days. Since installing and testing their dependency chains was burning a lot of cpu, time and bandwidth every time a new module based on them was updated or added to &lt;a href=&quot;http://search.cpan.org/&quot;&gt;CPAN&lt;/a&gt;&lt;/p&gt;
+
+</description>
+	</item>
+	
+        </channel>
+</rss>

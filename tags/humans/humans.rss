@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged humans</title>
+		<description>Entries tagged humans</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Things I have learnt this week</title>
+		<link>http://tech.randomness.org.uk/Things_I_have_learnt_this_week.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Things_I_have_learnt_this_week.html</guid>
+                <pubDate>Sat, 7 Apr 2007 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;Things I have learnt this week.
+&lt;/p&gt;&lt;ul&gt;
+&lt;li class=&quot;u&quot;&gt;Backups are good.&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;If for instance your colo box breaks.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li class=&quot;u&quot;&gt;Tested backups are better.&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;Best to test them before your box breaks.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li class=&quot;u&quot;&gt;Automated backups are better still.&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;Humans forget to do things. Machines rarely do. So your backup may not be as recent as yo
+u think.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li class=&quot;u&quot;&gt;How to backup svn&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;&lt;code&gt; svnadmin dump $repo | bzip2 &amp;gt; svndump.bz2 &lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li class=&quot;u&quot;&gt;Checking which disk you are replacing in a degraded mirrored pair is a good thing&lt;ul&gt;
+&lt;li class=&quot;uu&quot;&gt;Your filesystem dieing or going back in time is not fun. See previous points&lt;/li&gt;&lt;/ul&gt;&lt;/l
+i&gt;&lt;/ul&gt;
+&lt;p&gt;Having learnt these things I have made my backup regime &lt;a href=&quot;http://morerandomness.org.uk/svn/tru
+nk/bob/scripts/backup.sh&quot;&gt;better&lt;/a&gt; and have made sure its croned and does backup the stuff I need. I s
+hould also start putting more stuff in my svn &lt;a href=&quot;http://morerandomness.org.uk/svn/&quot;&gt;repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This clusterfuck did annoyingly lead to losing about a weeks worth of data on the  &lt;a href=&quot;http://lo
+ndon.randomness.org.uk/&quot;&gt;Randomness Guide to London&lt;/a&gt; which was particularly galling since one of the
+reason for doing it was I trusted myself more with the data. bah&lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

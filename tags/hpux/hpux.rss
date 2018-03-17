@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged hpux</title>
+		<description>Entries tagged hpux</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>3 hours to get a bash prompt</title>
+		<link>http://tech.randomness.org.uk/3_hours_to_get_a_bash_prompt.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/3_hours_to_get_a_bash_prompt.html</guid>
+                <pubDate>Sat, 5 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;The other day &lt;a href=&quot;http://unixdaemon.net&quot;&gt;Dean&lt;/a&gt;and I were seeing if a HP PA-RISC workstation Dean had got off ebay worked. We managed to get it powered on going to serial console. Then jury rigged a cd drive to try an install of HP-UX.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It would seem the install cd Dean had didnt like doing the install over serial so we had to connect up a monitor and keyboard. Thankfully IBM use the same funny DVI connector for their servers.&lt;/p&gt;
+&lt;p&gt;We proceeded with the install, which was a new and exciting experience for me. We got a failure when it tried to install stuff like mozilla and GTK from the second and third install discs. However the main OS install seemed to be fine so we carried on. Even the big FAILURE printed using &lt;a href=&quot;http://www.hmug.org/man/6/banner.php&quot;&gt;banner&lt;/a&gt; didnt put us off. &lt;/p&gt;
+&lt;p&gt;So after several reboots we got to a stage where we could login. So we did. Then we found there was no bash and our sh skills are a little rusty. Not having tab completion is pain. Time for some software install using &lt;a href=&quot;http://www.docs.hp.com/en/B2355-90681/swinstall.1M.html&quot;&gt;swinstall&lt;/a&gt;. We hit a problem here. It would seem that swinstall is network aware and wishes to resolve the name of your host before it will install stuff. We then spent 30 minutes scracthing our heads until we realised that while there were 6 or so nsswitch files none of them was actually nsswitch.conf. So the OS really had no idea what was going on.&lt;/p&gt;
+&lt;p&gt;After all that we managed to get &lt;a href=&quot;http://hpux.connect.org.uk/hppd/hpux/Shells/bash-3.2/&quot;&gt;bash&lt;/a&gt; installed from a &lt;a href=&quot;http://hpux.connect.org.uk/&quot;&gt;Porting And Archive Centre for HP-UX&lt;/a&gt; package. The relief was great as we could finally tab complete&lt;/p&gt;
+
+</description>
+	</item>
+	
+        </channel>
+</rss>

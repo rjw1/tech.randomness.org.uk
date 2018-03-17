@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged zimki</title>
+		<description>Entries tagged zimki</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Moving to chronicle</title>
+		<link>http://tech.randomness.org.uk/Moving_to_chronicle.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Moving_to_chronicle.html</guid>
+                <pubDate>Sat, 29 Dec 2007 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;&lt;a href=&quot;http://www.zimki.com&quot;&gt;Zimki&lt;/a&gt; is now dead. So I had to move my &lt;a href=&quot;http://tech.randomness.org.uk&quot;&gt;blog&lt;/a&gt; to something else. After much thought I have moved it back to my own colo using &lt;a href=&quot;http://www.steve.org.uk/Software/chronicle/&quot;&gt;Chronicle&lt;/a&gt; as the blogging software.&lt;p&gt;
+&lt;p&gt;Of course this may mean some of you get a load of repeat entries. Sorry&lt;/p&gt;
+&lt;p&gt;With chronicle I made my own &lt;a href=&quot;http://svn.randomness.org.uk/trunk/bob/blogs/themes/bob/&quot;&gt;theme&lt;/a&gt;. I also improved the way they do stuff. It has always baffled me that people use templating engines yet dont make use of includes for site furniture like the header, footer and sidebar. So I added these&lt;p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

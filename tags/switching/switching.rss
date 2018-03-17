@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged switching</title>
+		<description>Entries tagged switching</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Switching.</title>
+		<link>http://tech.randomness.org.uk/Switching_.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Switching_.html</guid>
+                <pubDate>Tue, 4 Jul 2006 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;No, Not that &lt;a href=&quot;http://www.apple.com/getamac/&quot;&gt;one&lt;/a&gt; or indeed that &lt;a href=&quot;http://www.mozilla.com/firefox/switch.html&quot;&gt;one&lt;/a&gt; (thinking about it I stopped using IE at least 7 years ago). I&#39;ve finally succumbed and installed &lt;a href=&quot;http://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; on my laptop.&lt;/p&gt;
+&lt;p&gt; After several years of having &lt;a href=&quot;http://openbsd.org&quot;&gt;OpenBSD&lt;/a&gt; as my desktop OS of choice I&#39;ve decided to try something new. My work laptop has been&lt;a href=&quot;http://www.sun.com/software/solaris/&quot; &gt;Solaris 10&lt;/a&gt; for several months now given my previous incarnation as a Solaris Admin. However $work are a &lt;a href=&quot;http://www.debian.org/&quot;&gt;debian&lt;/a&gt; shop. So ive become more accustomed to linux and its annoyances and even started to like some of the features (&lt;a href=&quot;http://linux-net.osdl.org/index.php/Iproute2&quot;&gt;iproute&lt;/a&gt;,&lt;a href=&quot;http://www.debian.org/doc/manuals/apt-howto/&quot;&gt;apt&lt;/a&gt;). Also it was time for a reinstall anyway.&lt;/p&gt;
+&lt;p&gt; So I downloaded an iso and did the install dance. It all went smoothly. INstalling windowmaker and making it my session default was also easy. the choice of programs is overwhelming compared to what was in the openbsd ports collections. Then a bad thing happened. It ate my X config. I dont know why but it just did.Thankfully a reinstall fixed. Which was good thing since I had installed lots of crap anyway.&lt;/p&gt;
+&lt;p&gt; Im seriously tempted to install it on my work laptop to.&lt;/p&gt;  
+
+</description>
+	</item>
+	
+        </channel>
+</rss>

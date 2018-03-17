@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged heartbeat</title>
+		<description>Entries tagged heartbeat</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Ooo Shiny Lights</title>
+		<link>http://tech.randomness.org.uk/Ooo_Shiny_Lights.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Ooo_Shiny_Lights.html</guid>
+                <pubDate>Mon, 31 Jul 2006 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt; I was sitting in a datacentre in the arse end of nowhere the other day waiting for a machine to boot when I noticed that 4 drives were flashing their activity lights at the same time. The fact that these 4 drives were spread across 2 machines was really shiny. It meant that soemthing I had set up was obvioulsy working properly.&lt;/p&gt;
+&lt;p&gt; Each machine had 2 mirrored disks using software raid which accounts for 2 drives in one machine flashing at the same time. What made all 4 drives flash at the same time was &lt;a href=&quot;http://www.drbd.org/&quot;&gt;drbd&lt;/a&gt; which is bascially network raid 1.&lt;/p&gt;
+&lt;p&gt; We are using &lt;a href=&quot;http://www.drbd.org/&quot;&gt;drbd&lt;/a&gt; along with &lt;a href=&quot;http://linux-ha.org/HeartbeatProgram&quot;&gt;heartbeat&lt;/a&gt; to provide a HA solution for our database needs.&lt;/p&gt;
+&lt;p&gt; Anyway it felt good to realise that soemthing I had setup had a physical means to show it is working. Although it has to be said it felt quite good when I could just yank the power out of a machine and have the database failover nicely.&lt;/p&gt; 
+</description>
+	</item>
+	
+	<item>
+		<title>Multiple Hearbeats</title>
+		<link>http://tech.randomness.org.uk/Multiple_Hearbeats.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Multiple_Hearbeats.html</guid>
+                <pubDate>Fri, 30 Mar 2007 16:18:17 GMT</pubDate>
+		<description>        &lt;p&gt;If you are running more than one &lt;a href=&quot;http://www.linux-ha.org/HeartbeatProgram&quot;&gt;heartbeat
+&lt;/a&gt;
+cluster on a network segment do make sure that your udpport is
+different for each cluster. Otherwise you very quickly get a very large
+log file as one of the other clusters gets all confused by the other
+one trying to connect to it. &lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

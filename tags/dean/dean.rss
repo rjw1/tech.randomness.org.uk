@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged dean</title>
+		<description>Entries tagged dean</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Dean&#39;s Cron Commandments</title>
+		<link>http://tech.randomness.org.uk/Dean_s_Cron_Commandments.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Dean_s_Cron_Commandments.html</guid>
+                <pubDate>Mon, 4 Aug 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;Dean wrote his &lt;a href=&quot;http://blog.unixdaemon.net/cgi-bin/blosxom.pl/sysadmin/cron_commandments.html&quot;&gt;Cron Commandments&lt;/a&gt; a while back but they got some link loving from &lt;a href=&quot;http://simonwillison.net/2008/Jun/27/cron/&quot;&gt;Simon Willison &lt;/a&gt;relatively recently. The one he misses though is &lt;b&gt;Thou shall not rewrite cron&lt;/b&gt;. Im looking at you &lt;a href=&quot;http://backgroundrb.rubyforge.org/&quot;&gt;backgroundrb&lt;/a&gt; and &lt;a href=&quot;http://rufus.rubyforge.org/rufus-scheduler/files/README_txt.html&quot;&gt;rufus-scheduler&lt;/a&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

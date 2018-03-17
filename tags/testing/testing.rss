@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged testing</title>
+		<description>Entries tagged testing</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Testing makes me feel good!</title>
+		<link>http://tech.randomness.org.uk/Testing_makes_me_feel_good_.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Testing_makes_me_feel_good_.html</guid>
+                <pubDate>Mon, 7 Jan 2008 16:18:17 GMT</pubDate>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>Testing perl 5.10.1-RC1</title>
+		<link>http://tech.randomness.org.uk/Testing_perl_5_10_1_RC1.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Testing_perl_5_10_1_RC1.html</guid>
+                <pubDate>Mon, 10 Aug 2009 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;The first &lt;a href=&quot;http://use.perl.org/articles/09/08/07/0910246.shtml&quot;&gt;perl 5.10.1&lt;/a&gt; release candidate was released the other day. As &lt;a href=&quot;http://www.shadowcat.co.uk/blog/matt-s-trout/test-the-rc-test-the-rc-test-the-rc/&quot;&gt;mst says&lt;/a&gt; if you don&#39;t test it now and it breaks for you when its released its your fault. As a good &lt;a href=&quot;http://www.cpantesters.org/&quot;&gt;cpan tester&lt;/a&gt; I&#39;ve added it to my testing &lt;a href=&quot;http://svn.randomness.org.uk/trunk/bob/scripts/cpantest.sh&quot;&gt;setup&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Since I care about &lt;a href=&quot;http://openguides.org/&quot;&gt;OpenGuides&lt;/a&gt; for the &lt;a href=&quot;http://london.randomness.org.uk&quot;&gt;Randomness Guide to London&lt;/a&gt; I made sure to submit a &lt;a href=&quot;http://www.nntp.perl.org/group/perl.cpan.testers/2009/08/msg4944870.html&quot;&gt;test report&lt;/a&gt; for &lt;a href=&quot;http://www.cpantesters.org/distro/O/OpenGuides.html&quot;&gt;it&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While I was doing this I also added perl 5.8.9 to my setup. I also changed my setup slightly by pre-installing &lt;a href=&quot;http://www.iinteractive.com/moose/&quot;&gt;Moose&lt;/a&gt; and &lt;a href=&quot;http://www.catalystframework.org/&quot;&gt;Catalyst&lt;/a&gt; since thats what all the cool perl programmers are using these days. Since installing and testing their dependency chains was burning a lot of cpu, time and bandwidth every time a new module based on them was updated or added to &lt;a href=&quot;http://search.cpan.org/&quot;&gt;CPAN&lt;/a&gt;&lt;/p&gt;
+
+</description>
+	</item>
+	
+        </channel>
+</rss>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries from January 2008</title>
+		<description>Entries from January 2008</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>3 hours to get a bash prompt</title>
+		<link>http://tech.randomness.org.uk/3_hours_to_get_a_bash_prompt.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/3_hours_to_get_a_bash_prompt.html</guid>
+                <pubDate>Sat, 5 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;The other day &lt;a href=&quot;http://unixdaemon.net&quot;&gt;Dean&lt;/a&gt;and I were seeing if a HP PA-RISC workstation Dean had got off ebay worked. We managed to get it powered on going to serial console. Then jury rigged a cd drive to try an install of HP-UX.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It would seem the install cd Dean had didnt like doing the install over serial so we had to connect up a monitor and keyboard. Thankfully IBM use the same funny DVI connector for their servers.&lt;/p&gt;
+&lt;p&gt;We proceeded with the install, which was a new and exciting experience for me. We got a failure when it tried to install stuff like mozilla and GTK from the second and third install discs. However the main OS install seemed to be fine so we carried on. Even the big FAILURE printed using &lt;a href=&quot;http://www.hmug.org/man/6/banner.php&quot;&gt;banner&lt;/a&gt; didnt put us off. &lt;/p&gt;
+&lt;p&gt;So after several reboots we got to a stage where we could login. So we did. Then we found there was no bash and our sh skills are a little rusty. Not having tab completion is pain. Time for some software install using &lt;a href=&quot;http://www.docs.hp.com/en/B2355-90681/swinstall.1M.html&quot;&gt;swinstall&lt;/a&gt;. We hit a problem here. It would seem that swinstall is network aware and wishes to resolve the name of your host before it will install stuff. We then spent 30 minutes scracthing our heads until we realised that while there were 6 or so nsswitch files none of them was actually nsswitch.conf. So the OS really had no idea what was going on.&lt;/p&gt;
+&lt;p&gt;After all that we managed to get &lt;a href=&quot;http://hpux.connect.org.uk/hppd/hpux/Shells/bash-3.2/&quot;&gt;bash&lt;/a&gt; installed from a &lt;a href=&quot;http://hpux.connect.org.uk/&quot;&gt;Porting And Archive Centre for HP-UX&lt;/a&gt; package. The relief was great as we could finally tab complete&lt;/p&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>Hostnames as Bash Commands</title>
+		<link>http://tech.randomness.org.uk/Hostnames_as_Bash_Commands.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Hostnames_as_Bash_Commands.html</guid>
+                <pubDate>Sun, 6 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;In the &lt;a href=&quot;http://london.randomness.org.uk/wiki.cgi?Edgar_Wallace,_WC2R_3JF&quot;&gt;pub&lt;/a&gt; the other day for the &lt;a href=&quot;http://london.pm.org/&quot;&gt;London.pm&lt;a/&gt; &lt;a href=&quot;http://london.pm.org/meetings/&quot;&gt;Social&lt;/a&gt; Smylers brought up the stuff he uses to make &lt;a href=&quot;http://london.pm.org/pipermail/london.pm/Week-of-Mon-20071231/011920.html&quot;&gt;hostnames a bash command&lt;/a&gt;. He also found the time to generate some &lt;a href=&quot;http://smylers.hates-software.com/2008/01/04/090399e2.html&quot;&gt;hate&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;I do this another way as I have previoulsy &lt;a href=&quot;http://tech.randomness.org.uk/Function_and_Alias_use_in_bash.html&quot;&gt;blogged&lt;/a&gt;. Dominic Mitchell at the time &lt;a href=&quot;http://happygiraffe.net/blog/articles/2006/10/05/shell-scripting&quot;&gt;pointed out&lt;/a&gt; that my scripting sucks. In fact my &lt;a href=&quot;http://svn.randomness.org.uk/trunk/bob/dotfiles/.bash_functions&quot;&gt;current version&lt;/a&gt; takes his suggestions on board.&lt;/p&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>Planet Bob!</title>
+		<link>http://tech.randomness.org.uk/Planet_Bob_.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Planet_Bob_.html</guid>
+                <pubDate>Sun, 6 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;If you want to keep up with all my feeds you could use my newly setup &lt;a href=&quot;http://planet.randomness.org.uk/&quot;&gt;Planet&lt;/a&gt;. I used &lt;a href=&quot;http://search.cpan.org/~miyagawa/Plagger-0.7.17/lib/Plagger.pm&quot;&gt;Plagger&lt;/a&gt; and yet again made my own &lt;a href=&quot;http://svn.randomness.org.uk/trunk/bob/websites/planet.randomness.org.uk/assets/plugins/Publish-Planet/randomness/&quot;&gt;theme&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; It was relatively trivial to set up. Then again I had an &lt;a href=&quot;http://planetse16.org.uk/&quot;&gt;example&lt;/a&gt; to work from&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Testing makes me feel good!</title>
+		<link>http://tech.randomness.org.uk/Testing_makes_me_feel_good_.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Testing_makes_me_feel_good_.html</guid>
+                <pubDate>Mon, 7 Jan 2008 16:18:17 GMT</pubDate>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>SVN::Web for my repository</title>
+		<link>http://tech.randomness.org.uk/SVN__Web_for_my_repository.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/SVN__Web_for_my_repository.html</guid>
+                <pubDate>Tue, 8 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;I&#39;ve had a &lt;a href=&quot;http://svn.randomness.org.uk/&quot;&gt;svn repo&lt;/a&gt; for a while. Today I installed &lt;a href=&quot;http://search.cpan.org/dist/SVN-Web/&quot;&gt;SVN::Web&lt;/a&gt; which gives a useful web interface to it. For example you can see other revisions than the current one. &lt;a href=&quot;http://svnweb.randomness.org.uk/index.cgi/randomness/&quot;&gt;My Repository&lt;/a&gt; via SVN::Web.&lt;/p&gt;
+&lt;p&gt; One reason why i did this is that it gives a &lt;a href=&quot;http://svnweb.randomness.org.uk/index.cgi/randomness/rss&quot;&gt;RSS feed&lt;/a&gt; of the revision log. This means I can use &lt;a href=&quot;http://rssfwd.com/&quot;&gt;RSS FWD&lt;/a&gt; to get commit messages in my email without having to mess with commit hooks.&lt;/p&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>Hating mailman</title>
+		<link>http://tech.randomness.org.uk/Hating_mailman.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Hating_mailman.html</guid>
+                <pubDate>Sun, 13 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;Today I have mostly been &lt;a href=&quot;http://bob.hates-software.com/2008/01/13/e1af6d12.html&quot;&gt;hating&lt;/a&gt; &lt;a href=&quot;http://www.list.org/&quot;&gt;mailman&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;That&#39;s about an hour of my life im never getting back&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Patch accepted to chronicle</title>
+		<link>http://tech.randomness.org.uk/Patch_accepted_to_chronicle.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Patch_accepted_to_chronicle.html</guid>
+                <pubDate>Mon, 21 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;When I was setting up my &lt;a href=&quot;http://planet.randomness.org.uk/&quot;&gt;Planet&lt;/a&gt; I noticed that &lt;a href=&quot;http://www.steve.org.uk/Software/chronicle/&quot;&gt;Chronicle&lt;/a&gt; was outputting less that useful titles for the rss feed. Instead of whining I provided a &lt;a href=&quot;http://chronicle.repository.steve.org.uk/?rev/89eef19064e8&quot;&gt;patch&lt;/a&gt; which &lt;a href=&quot;http://www.steve.org.uk/&quot;&gt;Steve&lt;/a&gt; &lt;a href=&quot;http://chronicle.repository.steve.org.uk/?rev/3f0bf6fe2825&quot;&gt;accpeted&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+	</item>
+	
+        </channel>
+</rss>

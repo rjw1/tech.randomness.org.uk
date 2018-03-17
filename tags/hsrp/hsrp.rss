@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged hsrp</title>
+		<description>Entries tagged hsrp</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Cisco Routers for the Desperate</title>
+		<link>http://tech.randomness.org.uk/Cisco_Routers_for_the_Desperate.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Cisco_Routers_for_the_Desperate.html</guid>
+                <pubDate>Sun, 22 Jun 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;If you dont know much about using and setting up cisco routers I humbly suggest you buy &lt;a href=&quot;http://nostarch.com/frameset.php?startat=cisco&quot;&gt;Cisco Routers for the Desperate&lt;/a&gt;. It was very useful this week when I set up a pair of 2811s with HSRP. I would tell you how but I think you should buy the book instead.&lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged software</title>
+		<description>Entries tagged software</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Moving to chronicle</title>
+		<link>http://tech.randomness.org.uk/Moving_to_chronicle.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Moving_to_chronicle.html</guid>
+                <pubDate>Sat, 29 Dec 2007 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;&lt;a href=&quot;http://www.zimki.com&quot;&gt;Zimki&lt;/a&gt; is now dead. So I had to move my &lt;a href=&quot;http://tech.randomness.org.uk&quot;&gt;blog&lt;/a&gt; to something else. After much thought I have moved it back to my own colo using &lt;a href=&quot;http://www.steve.org.uk/Software/chronicle/&quot;&gt;Chronicle&lt;/a&gt; as the blogging software.&lt;p&gt;
+&lt;p&gt;Of course this may mean some of you get a load of repeat entries. Sorry&lt;/p&gt;
+&lt;p&gt;With chronicle I made my own &lt;a href=&quot;http://svn.randomness.org.uk/trunk/bob/blogs/themes/bob/&quot;&gt;theme&lt;/a&gt;. I also improved the way they do stuff. It has always baffled me that people use templating engines yet dont make use of includes for site furniture like the header, footer and sidebar. So I added these&lt;p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Hating mailman</title>
+		<link>http://tech.randomness.org.uk/Hating_mailman.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Hating_mailman.html</guid>
+                <pubDate>Sun, 13 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;Today I have mostly been &lt;a href=&quot;http://bob.hates-software.com/2008/01/13/e1af6d12.html&quot;&gt;hating&lt;/a&gt; &lt;a href=&quot;http://www.list.org/&quot;&gt;mailman&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;That&#39;s about an hour of my life im never getting back&lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged email</title>
+		<description>Entries tagged email</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>SVN::Web for my repository</title>
+		<link>http://tech.randomness.org.uk/SVN__Web_for_my_repository.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/SVN__Web_for_my_repository.html</guid>
+                <pubDate>Tue, 8 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;I&#39;ve had a &lt;a href=&quot;http://svn.randomness.org.uk/&quot;&gt;svn repo&lt;/a&gt; for a while. Today I installed &lt;a href=&quot;http://search.cpan.org/dist/SVN-Web/&quot;&gt;SVN::Web&lt;/a&gt; which gives a useful web interface to it. For example you can see other revisions than the current one. &lt;a href=&quot;http://svnweb.randomness.org.uk/index.cgi/randomness/&quot;&gt;My Repository&lt;/a&gt; via SVN::Web.&lt;/p&gt;
+&lt;p&gt; One reason why i did this is that it gives a &lt;a href=&quot;http://svnweb.randomness.org.uk/index.cgi/randomness/rss&quot;&gt;RSS feed&lt;/a&gt; of the revision log. This means I can use &lt;a href=&quot;http://rssfwd.com/&quot;&gt;RSS FWD&lt;/a&gt; to get commit messages in my email without having to mess with commit hooks.&lt;/p&gt;
+
+</description>
+	</item>
+	
+        </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged cache</title>
+		<description>Entries tagged cache</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>An Apache holding page with mod_rewrite</title>
+		<link>http://tech.randomness.org.uk/An_Apache_holding_page_with_mod_rewrite.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/An_Apache_holding_page_with_mod_rewrite.html</guid>
+                <pubDate>Sun, 16 Aug 2009 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;On Thursday the &lt;a href=&quot;http://london.randomness.org.uk&quot;&gt;Randomness Guide to London&lt;/a&gt; was probably the target of a &lt;a href=&quot;http://en.wikipedia.org/wiki/Denial-of-service_attack&quot;&gt;ddos&lt;/a&gt; attack. The machine it was hosted on went to load of about 60. Which is fine since its solaris. The main problem was when the machine exhausted its memory and started to swap the machine would become unresponive.. To mitigate this I dropped the number of concurrent connections apache allowed. The machine suffered less but the website was still unusable because you were fighting to get one of the limited number of available connections.&lt;/p&gt;
+
+&lt;p&gt; Since I was in the &lt;a href=&quot;http://london.randomness.org.uk/wiki.cgi?Bricklayer&#39;s_Arms,_SW15_1DD&quot;&gt;pub&lt;/a&gt; the other administrator of the &lt;a href=&quot;http://london.randomness.org.uk&quot;&gt;Randomness Guide to London&lt;/a&gt; was renaming the CGIs so that load would drop and she could get on to it. When I got back I whipped up some mod_rewrite rules such that we could see the site but everyone else got a holding page. 10 minutes after this the ddos stopped. So it was a bit late. However a holding page is still a useful thing to have.&lt;/p&gt;
+
+&lt;p&gt;The next morning I refined it a bit to be more intelligent and return a 503 which is the correct status code.&lt;/p&gt;
+&lt;pre&gt;
+RewriteEngine On
+RewriteCond %{REMOTE_ADDR} !AAA.BBB.CCC.DDD
+RewriteCond %{DOCUMENT_ROOT}/holding.html -f
+RewriteCond %{DOCUMENT_ROOT}/holding.enable -f
+RewriteCond %{SCRIPT_FILENAME} !holding.html
+RewriteRule ^.*$ /holding.html [R=503,L]
+ErrorDocument 503 /holding.html
+&lt;/pre&gt;
+
+&lt;/p&gt;First turn on the rewrite engine. Then the conditions for which the RewriteRule applies
+&lt;ul&gt;
+&lt;li&gt;Don&#39;t match an IP address. So you can see the site.&lt;/li&gt;
+&lt;li&gt;Make sure holding.html exists&lt;/li&gt;
+&lt;li&gt;Check for the existence of a file called holding.enable. This is the means by which you turn holding page on and off.&lt;/li&gt;
+&lt;li&gt;Don&#39;t apply the rule when serving holding.html&lt;/li&gt;
+&lt;/ul&gt;
+Then the rule itself. Which basically redirects anything to the 503 error page. Which you then set as holding.html&lt;/p&gt;
+&lt;p&gt;That&#39;s all you really need although at work I add an extra line to help stupid web caches not keep on showing the error page after the site is back. 
+&lt;pre&gt;
+Header Set Cache-Control &quot;max-age=0, no-store&quot;
+&lt;/pre&gt;
+&lt;/p&gt;
+
+</description>
+	</item>
+	
+        </channel>
+</rss>

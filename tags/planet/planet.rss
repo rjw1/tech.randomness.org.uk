@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged planet</title>
+		<description>Entries tagged planet</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Planet Bob!</title>
+		<link>http://tech.randomness.org.uk/Planet_Bob_.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Planet_Bob_.html</guid>
+                <pubDate>Sun, 6 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;If you want to keep up with all my feeds you could use my newly setup &lt;a href=&quot;http://planet.randomness.org.uk/&quot;&gt;Planet&lt;/a&gt;. I used &lt;a href=&quot;http://search.cpan.org/~miyagawa/Plagger-0.7.17/lib/Plagger.pm&quot;&gt;Plagger&lt;/a&gt; and yet again made my own &lt;a href=&quot;http://svn.randomness.org.uk/trunk/bob/websites/planet.randomness.org.uk/assets/plugins/Publish-Planet/randomness/&quot;&gt;theme&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; It was relatively trivial to set up. Then again I had an &lt;a href=&quot;http://planetse16.org.uk/&quot;&gt;example&lt;/a&gt; to work from&lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

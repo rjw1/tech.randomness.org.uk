@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged bash</title>
+		<description>Entries tagged bash</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Function and Alias use in bash</title>
+		<link>http://tech.randomness.org.uk/Function_and_Alias_use_in_bash.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Function_and_Alias_use_in_bash.html</guid>
+                <pubDate>Sun, 1 Oct 2006 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;For a while now ive been using aliases to connect to machines. I alias a $hostname to &lt;code&gt;xterm -T $hostname -e ssh $hostname &amp;&lt;/code&gt;. This means each connection gets a new fresh xterm. Of course doing an alias command for each host woudl be tedious so i have some magic in bash startup stuff.&lt;/p&gt;
+&lt;pre&gt;
+bob@betty:~ &gt;cat .bashrc 
+[ -f ~/.bash_aliases ] &amp;&amp; . ~/.bash_aliases
+PS1=&quot;\u@\h:\w &gt;&quot;
+PATH=$PATH:/usr/sbin:/usr/local/sbin:/sbin
+bob@betty:~ &gt;cat .bash_aliases 
+for MACHINE in `cat ~/.machines`
+do
+alias $MACHINE=&quot;xterm -T $MACHINE -e ssh $MACHINE &amp;&quot;
+done
+&lt;/pre&gt;
+&lt;p&gt; Where &lt;code&gt;.machines&lt;/code&gt; is a list of machines one per line&lt;/p&gt;
+&lt;p&gt; Recently I have been connecting to machines which arnt in this list with ssh directly. This has the disadvantage that they dont get their own xterm and I have to start another xterm manually if I need another one. So I started to looking into aliasing ssh to the same thing. However, aliases arnt clever enough for this you need to use functions instead. &lt;/p&gt;
+&lt;p&gt;So I wrote a function to do what i wanted.&lt;/p&gt;
+&lt;pre&gt;
+function ssh {
+xterm -T $1 -e ssh $1 &amp;
+}
+&lt;/pre&gt;
+&lt;p&gt; It then occured to me since this is just programming perhaps I can expand this to check to see if host is mentioned in &lt;code&gt;.machines&lt;/code&gt; and if it isnt add it. So I wrote a function&lt;/p&gt;
+&lt;pre&gt;
+function testmachine {
+machine=`grep $1 ~/.machines`
+if [ &quot;x$machine&quot; = &quot;x&quot; ]
+then
+        echo &quot;not in ~/.machines adding&quot;
+        echo $1 &gt;&gt; ~/.machines
+        source ~/.bash_aliases
+fi
+}
+&lt;/pre&gt;
+&lt;p&gt; As you can see it also then sources &lt;code&gt;~/.bash_aliases&lt;/code&gt; this makes sure that the current shell gets the new alias. I then added more to the ssh fucntion&lt;/p&gt;
+&lt;pre&gt;
+function ssh {
+xterm -T $1 -e ssh $1 &amp;
+testmachine $1
+}
+&lt;/pre&gt;
+&lt;p&gt;I then told my &lt;code&gt;.bashrc&lt;/code&gt; to source a new file called &lt;code&gt;.bash_functions&lt;/code&gt; which contains the two fucntions from above. And everything is now good.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>3 hours to get a bash prompt</title>
+		<link>http://tech.randomness.org.uk/3_hours_to_get_a_bash_prompt.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/3_hours_to_get_a_bash_prompt.html</guid>
+                <pubDate>Sat, 5 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;The other day &lt;a href=&quot;http://unixdaemon.net&quot;&gt;Dean&lt;/a&gt;and I were seeing if a HP PA-RISC workstation Dean had got off ebay worked. We managed to get it powered on going to serial console. Then jury rigged a cd drive to try an install of HP-UX.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It would seem the install cd Dean had didnt like doing the install over serial so we had to connect up a monitor and keyboard. Thankfully IBM use the same funny DVI connector for their servers.&lt;/p&gt;
+&lt;p&gt;We proceeded with the install, which was a new and exciting experience for me. We got a failure when it tried to install stuff like mozilla and GTK from the second and third install discs. However the main OS install seemed to be fine so we carried on. Even the big FAILURE printed using &lt;a href=&quot;http://www.hmug.org/man/6/banner.php&quot;&gt;banner&lt;/a&gt; didnt put us off. &lt;/p&gt;
+&lt;p&gt;So after several reboots we got to a stage where we could login. So we did. Then we found there was no bash and our sh skills are a little rusty. Not having tab completion is pain. Time for some software install using &lt;a href=&quot;http://www.docs.hp.com/en/B2355-90681/swinstall.1M.html&quot;&gt;swinstall&lt;/a&gt;. We hit a problem here. It would seem that swinstall is network aware and wishes to resolve the name of your host before it will install stuff. We then spent 30 minutes scracthing our heads until we realised that while there were 6 or so nsswitch files none of them was actually nsswitch.conf. So the OS really had no idea what was going on.&lt;/p&gt;
+&lt;p&gt;After all that we managed to get &lt;a href=&quot;http://hpux.connect.org.uk/hppd/hpux/Shells/bash-3.2/&quot;&gt;bash&lt;/a&gt; installed from a &lt;a href=&quot;http://hpux.connect.org.uk/&quot;&gt;Porting And Archive Centre for HP-UX&lt;/a&gt; package. The relief was great as we could finally tab complete&lt;/p&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>Hostnames as Bash Commands</title>
+		<link>http://tech.randomness.org.uk/Hostnames_as_Bash_Commands.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Hostnames_as_Bash_Commands.html</guid>
+                <pubDate>Sun, 6 Jan 2008 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;In the &lt;a href=&quot;http://london.randomness.org.uk/wiki.cgi?Edgar_Wallace,_WC2R_3JF&quot;&gt;pub&lt;/a&gt; the other day for the &lt;a href=&quot;http://london.pm.org/&quot;&gt;London.pm&lt;a/&gt; &lt;a href=&quot;http://london.pm.org/meetings/&quot;&gt;Social&lt;/a&gt; Smylers brought up the stuff he uses to make &lt;a href=&quot;http://london.pm.org/pipermail/london.pm/Week-of-Mon-20071231/011920.html&quot;&gt;hostnames a bash command&lt;/a&gt;. He also found the time to generate some &lt;a href=&quot;http://smylers.hates-software.com/2008/01/04/090399e2.html&quot;&gt;hate&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;I do this another way as I have previoulsy &lt;a href=&quot;http://tech.randomness.org.uk/Function_and_Alias_use_in_bash.html&quot;&gt;blogged&lt;/a&gt;. Dominic Mitchell at the time &lt;a href=&quot;http://happygiraffe.net/blog/articles/2006/10/05/shell-scripting&quot;&gt;pointed out&lt;/a&gt; that my scripting sucks. In fact my &lt;a href=&quot;http://svn.randomness.org.uk/trunk/bob/dotfiles/.bash_functions&quot;&gt;current version&lt;/a&gt; takes his suggestions on board.&lt;/p&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>Testing makes me feel good!</title>
+		<link>http://tech.randomness.org.uk/Testing_makes_me_feel_good_.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Testing_makes_me_feel_good_.html</guid>
+                <pubDate>Mon, 7 Jan 2008 16:18:17 GMT</pubDate>
+		<description></description>
+	</item>
+	
+        </channel>
+</rss>

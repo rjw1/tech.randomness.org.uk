@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries tagged tip</title>
+		<description>Entries tagged tip</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Multiple Hearbeats</title>
+		<link>http://tech.randomness.org.uk/Multiple_Hearbeats.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Multiple_Hearbeats.html</guid>
+                <pubDate>Fri, 30 Mar 2007 16:18:17 GMT</pubDate>
+		<description>        &lt;p&gt;If you are running more than one &lt;a href=&quot;http://www.linux-ha.org/HeartbeatProgram&quot;&gt;heartbeat
+&lt;/a&gt;
+cluster on a network segment do make sure that your udpport is
+different for each cluster. Otherwise you very quickly get a very large
+log file as one of the other clusters gets all confused by the other
+one trying to connect to it. &lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>

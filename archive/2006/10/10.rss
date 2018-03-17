@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version='2.0' xmlns:lj='http://www.livejournal.org/rss/lj/1.0/'>
+	<channel>
+		<title>bob's tech ramblings - Entries from October 2006</title>
+		<description>Entries from October 2006</description>
+                <link>http://tech.randomness.org.uk/</link>
+
+	
+	<item>
+		<title>Function and Alias use in bash</title>
+		<link>http://tech.randomness.org.uk/Function_and_Alias_use_in_bash.html</link>        
+		<guid isPermaLink="true">http://tech.randomness.org.uk/Function_and_Alias_use_in_bash.html</guid>
+                <pubDate>Sun, 1 Oct 2006 16:18:17 GMT</pubDate>
+		<description>&lt;p&gt;For a while now ive been using aliases to connect to machines. I alias a $hostname to &lt;code&gt;xterm -T $hostname -e ssh $hostname &amp;&lt;/code&gt;. This means each connection gets a new fresh xterm. Of course doing an alias command for each host woudl be tedious so i have some magic in bash startup stuff.&lt;/p&gt;
+&lt;pre&gt;
+bob@betty:~ &gt;cat .bashrc 
+[ -f ~/.bash_aliases ] &amp;&amp; . ~/.bash_aliases
+PS1=&quot;\u@\h:\w &gt;&quot;
+PATH=$PATH:/usr/sbin:/usr/local/sbin:/sbin
+bob@betty:~ &gt;cat .bash_aliases 
+for MACHINE in `cat ~/.machines`
+do
+alias $MACHINE=&quot;xterm -T $MACHINE -e ssh $MACHINE &amp;&quot;
+done
+&lt;/pre&gt;
+&lt;p&gt; Where &lt;code&gt;.machines&lt;/code&gt; is a list of machines one per line&lt;/p&gt;
+&lt;p&gt; Recently I have been connecting to machines which arnt in this list with ssh directly. This has the disadvantage that they dont get their own xterm and I have to start another xterm manually if I need another one. So I started to looking into aliasing ssh to the same thing. However, aliases arnt clever enough for this you need to use functions instead. &lt;/p&gt;
+&lt;p&gt;So I wrote a function to do what i wanted.&lt;/p&gt;
+&lt;pre&gt;
+function ssh {
+xterm -T $1 -e ssh $1 &amp;
+}
+&lt;/pre&gt;
+&lt;p&gt; It then occured to me since this is just programming perhaps I can expand this to check to see if host is mentioned in &lt;code&gt;.machines&lt;/code&gt; and if it isnt add it. So I wrote a function&lt;/p&gt;
+&lt;pre&gt;
+function testmachine {
+machine=`grep $1 ~/.machines`
+if [ &quot;x$machine&quot; = &quot;x&quot; ]
+then
+        echo &quot;not in ~/.machines adding&quot;
+        echo $1 &gt;&gt; ~/.machines
+        source ~/.bash_aliases
+fi
+}
+&lt;/pre&gt;
+&lt;p&gt; As you can see it also then sources &lt;code&gt;~/.bash_aliases&lt;/code&gt; this makes sure that the current shell gets the new alias. I then added more to the ssh fucntion&lt;/p&gt;
+&lt;pre&gt;
+function ssh {
+xterm -T $1 -e ssh $1 &amp;
+testmachine $1
+}
+&lt;/pre&gt;
+&lt;p&gt;I then told my &lt;code&gt;.bashrc&lt;/code&gt; to source a new file called &lt;code&gt;.bash_functions&lt;/code&gt; which contains the two fucntions from above. And everything is now good.&lt;/p&gt;
+</description>
+	</item>
+	
+        </channel>
+</rss>
